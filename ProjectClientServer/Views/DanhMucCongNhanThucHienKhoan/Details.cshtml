@@ -1,0 +1,34 @@
+﻿@model ProjectClientServer.Model.DanhMucCongNhanThucHienKhoan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanhMucCongNhanThucHienKhoan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LaKhoanChung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LaKhoanChung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDanhMucCNTHK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model ProjectClientServer.Model.NKSLK
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NKSLK</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMucCongViec.MaCongViec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMucCongViec.MaCongViec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayThucHienKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayThucHienKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioBatDau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioKetThuc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaNK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

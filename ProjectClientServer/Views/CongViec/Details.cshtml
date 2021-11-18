@@ -1,0 +1,66 @@
+﻿@model ProjectClientServer.Model.CongViec
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CongViec</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCongViec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCongViec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DinhMucKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DinhMucKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonViKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonViKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeSoKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeSoKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DinhMucLaoDong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DinhMucLaoDong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaCongViec }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

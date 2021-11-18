@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ProjectClientServer.Model.SanPham>
+
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDangKy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HanSuDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuyCach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDangKy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDangKy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HanSuDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuyCach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDangKy)
+        </td>
+        <td>
+
+            <a href="~/SanPham/Edit/@item.MaSanPham"> Chỉnh sửa |</a>
+            <a href="~/SanPham/Details/@item.MaSanPham"> Chi tiết |</a>
+            <a href="~/SanPham/Delete/@item.MaSanPham"> Xóa</a>
+
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.MaSanPham }) |
+        @Html.ActionLink("Details", "Details", new { id=item.MaSanPham }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.MaSanPham })*@
+        </td>
+    </tr>
+}
+
+</table>

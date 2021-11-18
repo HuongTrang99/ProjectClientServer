@@ -1,0 +1,12 @@
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\ProjectClientServer.Model.dll.config
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\ProjectClientServer.Model.dll
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\ProjectClientServer.Model.pdb
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\EntityFramework.dll
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\EntityFramework.xml
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\obj\Debug\ProjectClientServer.Model.csprojAssemblyReference.cache
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\obj\Debug\ProjectClientServer.Model.csproj.CoreCompileInputs.cache
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\obj\Debug\ProjectClientServer.Model.csproj.CopyComplete
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\obj\Debug\ProjectClientServer.Model.dll
+C:\Users\HuongTrang's PC\source\repos\ProjectClientServer\ProjectClientServer.Model\obj\Debug\ProjectClientServer.Model.pdb
