@@ -1,17 +1,18 @@
 ﻿@model ProjectClientServer.Model.DanhMucCongNhanThucHienKhoan
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết danh mục thực hiện khoán";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết danh mục thực hiện khoán</h2>
 
 <div>
-    <h4>DanhMucCongNhanThucHienKhoan</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.SoLuong)
+            @*@Html.DisplayNameFor(model => model.SoLuong)*@
+            Số lượng
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LaKhoanChung)
+            @*@Html.DisplayNameFor(model => model.LaKhoanChung)*@
+            Là khoán chung
         </dt>
 
         <dd>
@@ -29,6 +31,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDanhMucCNTHK }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaDanhMucCNTHK }) |
+    @Html.ActionLink("Quay lại", "Index", "DanhMucCongNhanThucHienKhoanController", new { @class = "btn btn-primary" })
 </p>

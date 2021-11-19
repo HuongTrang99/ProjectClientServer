@@ -1,93 +1,111 @@
 ﻿@model IEnumerable<ProjectClientServer.Model.CongNhan>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Thông tin công nhân";
 }
 
-<h2>Index</h2>
+<h2>Thông tin công nhân</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Thêm mới", "Create")*@
+    @Html.ActionLink("Thêm mới", "Create", "CongNhanController", new { @class = "btn btn-primary" })
+   
 </p>
-<table class="table">
+<table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.HoTen)
+            @*@Html.DisplayNameFor(model => model.HoTen)*@
+            Họ và tên công nhân
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayThangNamSinh)
+            @*@Html.DisplayNameFor(model => model.NgayThangNamSinh)*@
+            Ngày tháng năm sinh công nhân
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PhongBan)
+            @*@Html.DisplayNameFor(model => model.PhongBan)*@
+            Phòng ban làm việc
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ChucVu)
+            @*@Html.DisplayNameFor(model => model.ChucVu)*@
+            Chức vụ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QueQuan)
+            @*@Html.DisplayNameFor(model => model.QueQuan)*@
+            Quê quán
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LuongHopDong)
+            @*@Html.DisplayNameFor(model => model.LuongHopDong)*@
+            Lương hợp đồng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LuongBaoHiem)
+            @*@Html.DisplayNameFor(model => model.LuongBaoHiem)*@
+            Lương bảo hiểm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GioiTinh)
+            @*@Html.DisplayNameFor(model => model.GioiTinh)*@
+            Giới tính
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TaiKhoan)
+            @*@Html.DisplayNameFor(model => model.TaiKhoan)*@
+            Tài khoản
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MatKhau)
+            @*@Html.DisplayNameFor(model => model.MatKhau)*@
+            Mật khẩu
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LaAdmin)
-        </th>
+        <!--<th>-->
+        @*@Html.DisplayNameFor(model => model.LaAdmin)*@
+        <!--Là admin
+        </th>-->
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HoTen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayThangNamSinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhongBan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ChucVu)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QueQuan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LuongHopDong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LuongBaoHiem)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GioiTinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TaiKhoan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MatKhau)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LaAdmin)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaCongNhan }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaCongNhan }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaCongNhan })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayThangNamSinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhongBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChucVu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueQuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LuongHopDong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LuongBaoHiem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.LaAdmin)
+                </td>*@
+            <td>
+                <a href="~/CongNhan/Edit/@item.MaCongNhan">|</a>
+                <a href="~/CongNhan/Details/@item.MaCongNhan"> Chi tiết |</a>
+                <a href="~/CongNhan/Delete/@item.MaCongNhan"> Xóa</a>
+
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.MaCongNhan }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.MaCongNhan }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.MaCongNhan })*@
+            </td>
+        </tr>
+    }
 
 </table>

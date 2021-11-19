@@ -4,59 +4,65 @@
     ViewBag.Title = "Danh sách sản phẩm";
 }
 
-<h2>Index</h2>
+<h2>Danh sách sản phẩm</h2>
 
 <p>
-    @Html.ActionLink("Tạo mới", "Create")
+    @Html.ActionLink("Thêm mới", "Create", "SanPhamController", new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.TenSanPham)*@
+            Tên sản phẩm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoDangKy)
+            @*@Html.DisplayNameFor(model => model.SoDangKy)*@
+            Số đăng ký
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HanSuDung)
+            @*@Html.DisplayNameFor(model => model.HanSuDung)*@
+            Hạn sử dụng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QuyCach)
+            @*@Html.DisplayNameFor(model => model.QuyCach)*@
+            Quy cách
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayDangKy)
+            @*@Html.DisplayNameFor(model => model.NgayDangKy)*@
+            Ngày đăng ký
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenSanPham)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoDangKy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HanSuDung)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QuyCach)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayDangKy)
-        </td>
-        <td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDangKy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HanSuDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuyCach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDangKy)
+            </td>
+            <td>
 
-            <a href="~/SanPham/Edit/@item.MaSanPham"> Chỉnh sửa |</a>
-            <a href="~/SanPham/Details/@item.MaSanPham"> Chi tiết |</a>
-            <a href="~/SanPham/Delete/@item.MaSanPham"> Xóa</a>
+                <a href="~/SanPham/Edit/@item.MaSanPham"> Chỉnh sửa |</a>
+                <a href="~/SanPham/Details/@item.MaSanPham"> Chi tiết |</a>
+                <a href="~/SanPham/Delete/@item.MaSanPham"> Xóa</a>
 
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.MaSanPham }) |
-        @Html.ActionLink("Details", "Details", new { id=item.MaSanPham }) |
-        @Html.ActionLink("Delete", "Delete", new { id=item.MaSanPham })*@
-        </td>
-    </tr>
-}
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.MaSanPham }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.MaSanPham }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.MaSanPham })*@
+            </td>
+        </tr>
+    }
 
 </table>

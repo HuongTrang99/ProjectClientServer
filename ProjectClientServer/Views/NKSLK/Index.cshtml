@@ -1,57 +1,66 @@
 ﻿@model IEnumerable<ProjectClientServer.Model.NKSLK>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách nhật ký sản lượng khoán";
 }
 
-<h2>Index</h2>
+<h2>Danh sách nhật ký sản lượng khoán</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create", "NKSLKController", new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
+            @*@Html.DisplayNameFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)*@
+            Danh mục thực hiện khoán
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DanhMucCongViec.MaCongViec)
+            @*@Html.DisplayNameFor(model => model.DanhMucCongViec.MaCongViec)*@
+            Công việc
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayThucHienKhoan)
+            @*@Html.DisplayNameFor(model => model.NgayThucHienKhoan)*@
+            Ngày thực hiện khoán
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GioBatDau)
+            @*@Html.DisplayNameFor(model => model.GioBatDau)*@
+            Giờ bắt đầu
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GioKetThuc)
+            @*@Html.DisplayNameFor(model => model.GioKetThuc)*@
+            Giờ kết thúcs
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DanhMucCongViec.MaCongViec)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayThucHienKhoan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GioBatDau)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GioKetThuc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaNK }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaNK }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaNK })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DanhMucCongViec.MaCongViec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayThucHienKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioKetThuc)
+            </td>
+            <td>
+                <a href="~/NKSLK/Edit/@item.MaNK"> Chỉnh sửa |</a>
+                <a href="~/NKSLK/Details/@item.MaNK"> Chi tiết |</a>
+                <a href="~/NKSLK/Delete/@item.MaNK"> Xóa</a>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.MaNK }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.MaNK }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.MaNK })*@
+            </td>
+        </tr>
+    }
 
 </table>

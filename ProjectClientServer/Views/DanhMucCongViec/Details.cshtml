@@ -1,17 +1,18 @@
 ﻿@model ProjectClientServer.Model.DanhMucCongViec
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết danh mục công việc";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết danh mục công việc</h2>
 
 <div>
-    <h4>DanhMucCongViec</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CongViec.TenCongViec)
+            @*@Html.DisplayNameFor(model => model.CongViec.TenCongViec)*@
+            Tên công việc
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SanPham.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.SanPham.TenSanPham)*@
+            Tên sản phẩm
         </dt>
 
         <dd>
@@ -27,7 +29,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLuongDatDuoc)
+            @*@Html.DisplayNameFor(model => model.SoLuongDatDuoc)*@
+            Số lượng đạt được
         </dt>
 
         <dd>
@@ -35,7 +38,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLoSanPham)
+            @*@Html.DisplayNameFor(model => model.SoLoSanPham)*@
+            Số lô sản phẩm
         </dt>
 
         <dd>
@@ -45,6 +49,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDanhMucCongViec }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaDanhMucCongViec }) |
+    @Html.ActionLink("Quay lại", "Index", "DanhMucCongViecController", new { @class = "btn btn-primary" })
 </p>

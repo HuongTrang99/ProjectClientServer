@@ -1,18 +1,19 @@
 ﻿@model ProjectClientServer.Model.CongNhanThucHienKhoan
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xóa thông tin công nhân thực hiện khoán";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+
+<h3>Bạn có chắc chắn muốn xóa thông tin công nhân thực hiện khoán này?</h3>
 <div>
-    <h4>CongNhanThucHienKhoan</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CongNhan.HoTen)
+            @*@Html.DisplayNameFor(model => model.CongNhan.HoTen)*@
+            Họ và tên công nhân
         </dt>
 
         <dd>
@@ -20,7 +21,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)
+            @*@Html.DisplayNameFor(model => model.DanhMucCongNhanThucHienKhoan.MaDanhMucCNTHK)*@
+            Danh mục thực hiện khoán
         </dt>
 
         <dd>
@@ -28,7 +30,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ThoiGianBatDau)
+            @*@Html.DisplayNameFor(model => model.ThoiGianBatDau)*@
+            Thời gian bắt đầu
         </dt>
 
         <dd>
@@ -36,7 +39,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ThoiGianKetThuc)
+            @*@Html.DisplayNameFor(model => model.ThoiGianKetThuc)*@
+            Thời gian kết thúc
         </dt>
 
         <dd>
@@ -48,9 +52,9 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Xóa" class="btn btn-default" /> |
+    @Html.ActionLink("Quay lại", "Index", "CongNhanThucHienKhoanController", new { @class = "btn btn-primary" })
+</div>
     }
 </div>

@@ -1,18 +1,19 @@
 ﻿@model ProjectClientServer.Model.DanhMucCongViec
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xóa danh mục công việc";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+
+<h3>Bạn chắc chắn muốn xóa thông tin này?</h3>
 <div>
-    <h4>DanhMucCongViec</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CongViec.TenCongViec)
+            @*@Html.DisplayNameFor(model => model.CongViec.TenCongViec)*@
+            Tên công việc
         </dt>
 
         <dd>
@@ -20,7 +21,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SanPham.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.SanPham.TenSanPham)*@
+            Tên sản phẩm
         </dt>
 
         <dd>
@@ -28,7 +30,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLuongDatDuoc)
+            @*@Html.DisplayNameFor(model => model.SoLuongDatDuoc)*@
+            Số lượng đạt được
         </dt>
 
         <dd>
@@ -36,7 +39,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLoSanPham)
+            @*@Html.DisplayNameFor(model => model.SoLoSanPham)*@
+            Số lô sản phẩm
         </dt>
 
         <dd>
@@ -48,9 +52,9 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Xóa" class="btn btn-default" /> |
+    @Html.ActionLink("Quay lại", "Index", "DanhMucCongViecController", new { @class = "btn btn-primary" })
+</div>
     }
 </div>

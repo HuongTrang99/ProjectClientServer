@@ -1,51 +1,60 @@
 ﻿@model IEnumerable<ProjectClientServer.Model.DanhMucCongViec>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh mục công việc";
 }
 
-<h2>Index</h2>
+<h2>Danh mục công việc</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create", "DanhMucCongViecController", new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CongViec.TenCongViec)
+            @*@Html.DisplayNameFor(model => model.CongViec.TenCongViec)*@
+            Tên công việc
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SanPham.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.SanPham.TenSanPham)*@
+            Tên sản phẩm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoLuongDatDuoc)
+            @*@Html.DisplayNameFor(model => model.SoLuongDatDuoc)*@
+            Số lượng đạt được
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoLoSanPham)
+            @*@Html.DisplayNameFor(model => model.SoLoSanPham)*@
+            Số lô sản phẩm
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CongViec.TenCongViec)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SanPham.TenSanPham)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuongDatDuoc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLoSanPham)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDanhMucCongViec }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDanhMucCongViec }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDanhMucCongViec })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CongViec.TenCongViec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SanPham.TenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongDatDuoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLoSanPham)
+            </td>
+            <td>
+                <a href="~/DanhMucCongViec/Edit/@item.MaDanhMucCongViec"> Chỉnh sửa |</a>
+                <a href="~/DanhMucCongViec/Details/@item.MaDanhMucCongViec"> Chi tiết |</a>
+                <a href="~/DanhMucCongViec/Delete/@item.MaDanhMucCongViec"> Xóa</a>
+
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.MaDanhMucCongViec }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.MaDanhMucCongViec }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.MaDanhMucCongViec })*@
+            </td>
+        </tr>
+    }
 
 </table>

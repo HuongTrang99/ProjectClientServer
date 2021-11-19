@@ -1,17 +1,18 @@
 ﻿@model ProjectClientServer.Model.CongViec
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết công việc";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết công việc</h2>
 
 <div>
-    <h4>CongViec</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.TenCongViec)
+            @*@Html.DisplayNameFor(model => model.TenCongViec)*@
+            Tên công việc
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DinhMucKhoan)
+            @*@Html.DisplayNameFor(model => model.DinhMucKhoan)*@
+            Định mức khoán
         </dt>
 
         <dd>
@@ -27,7 +29,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DonViKhoan)
+            @*@Html.DisplayNameFor(model => model.DonViKhoan)*@
+            Đơn vị khoán
         </dt>
 
         <dd>
@@ -35,7 +38,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.HeSoKhoan)
+            @*@Html.DisplayNameFor(model => model.HeSoKhoan)*@
+            Hệ số khoán
         </dt>
 
         <dd>
@@ -43,7 +47,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DinhMucLaoDong)
+            @*@Html.DisplayNameFor(model => model.DinhMucLaoDong)*@
+            Định mức lao động
         </dt>
 
         <dd>
@@ -51,7 +56,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DonGia)
+            @*@Html.DisplayNameFor(model => model.DonGia)*@
+            Đơn giá
         </dt>
 
         <dd>
@@ -61,6 +67,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaCongViec }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaCongViec }) |
+    @Html.ActionLink("Quay lại", "Index", "CongViecController", new { @class = "btn btn-primary" })
 </p>

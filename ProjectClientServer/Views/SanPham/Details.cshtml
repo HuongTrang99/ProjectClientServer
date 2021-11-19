@@ -1,17 +1,18 @@
 ﻿@model ProjectClientServer.Model.SanPham
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết sản phẩm";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết sản phẩm</h2>
 
 <div>
-    <h4>SanPham</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.TenSanPham)*@
+            Tên sản phẩm
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoDangKy)
+            @*@Html.DisplayNameFor(model => model.SoDangKy)*@
+            Số đăng ký
         </dt>
 
         <dd>
@@ -27,7 +29,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.HanSuDung)
+            @*@Html.DisplayNameFor(model => model.HanSuDung)*@
+            Hạn sử dụng
         </dt>
 
         <dd>
@@ -35,7 +38,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.QuyCach)
+            @*@Html.DisplayNameFor(model => model.QuyCach)*@
+            Quy cách
         </dt>
 
         <dd>
@@ -43,7 +47,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NgayDangKy)
+            @*@Html.DisplayNameFor(model => model.NgayDangKy)*@
+            Ngày đăng ký
         </dt>
 
         <dd>
@@ -53,6 +58,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSanPham }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaSanPham }) |
+
+    @Html.ActionLink("Quay lại", "Index", "SanPhamController", new { @class = "btn btn-primary" })
 </p>

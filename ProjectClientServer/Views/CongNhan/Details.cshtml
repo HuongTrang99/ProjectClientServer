@@ -1,17 +1,18 @@
 ﻿@model ProjectClientServer.Model.CongNhan
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết thông tin công nhân";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết thông tin công nhân</h2>
 
 <div>
-    <h4>CongNhan</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.HoTen)
+            @*@Html.DisplayNameFor(model => model.HoTen)*@
+            Họ và tên công nhân
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NgayThangNamSinh)
+            @*@Html.DisplayNameFor(model => model.NgayThangNamSinh)*@
+            Ngày tháng năm sinh
         </dt>
 
         <dd>
@@ -27,7 +29,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhongBan)
+            @*@Html.DisplayNameFor(model => model.PhongBan)*@
+            Phòng ban
         </dt>
 
         <dd>
@@ -35,7 +38,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ChucVu)
+            @*@Html.DisplayNameFor(model => model.ChucVu)*@
+            Chức vụ
         </dt>
 
         <dd>
@@ -43,7 +47,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.QueQuan)
+            @*@Html.DisplayNameFor(model => model.QueQuan)*@
+            Quê quán
         </dt>
 
         <dd>
@@ -51,7 +56,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LuongHopDong)
+            @*@Html.DisplayNameFor(model => model.LuongHopDong)*@
+            Lương hợp đồng
         </dt>
 
         <dd>
@@ -59,7 +65,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LuongBaoHiem)
+            @*@Html.DisplayNameFor(model => model.LuongBaoHiem)*@
+            Lương bảo hiểm
         </dt>
 
         <dd>
@@ -67,7 +74,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.GioiTinh)
+            @*@Html.DisplayNameFor(model => model.GioiTinh)*@
+            Giới tính
         </dt>
 
         <dd>
@@ -75,7 +83,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TaiKhoan)
+            @*@Html.DisplayNameFor(model => model.TaiKhoan)*@
+            Tài khoản
         </dt>
 
         <dd>
@@ -83,24 +92,26 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MatKhau)
+            @*@Html.DisplayNameFor(model => model.MatKhau)*@
+            Mật khẩu
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.MatKhau)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LaAdmin)
-        </dt>
+        <!--<dt>-->
+            @*@Html.DisplayNameFor(model => model.LaAdmin)*@
+           
+        <!--</dt>
 
         <dd>
             @Html.DisplayFor(model => model.LaAdmin)
-        </dd>
+        </dd>-->
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaCongNhan }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Chỉnh sửa thông tin công nhân", "Edit", new { id = Model.MaCongNhan }) |
+    @Html.ActionLink("Quay lại", "Index", "CongNhanController", new { @class = "btn btn-primary" })
 </p>

@@ -1,37 +1,37 @@
 ﻿@model ProjectClientServer.Model.CongNhanThucHienKhoan
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Tạo mới công tin công nhân thực hiện khoán";
 }
 
-<h2>Create</h2>
+<h2>Tạo mới công tin công nhân thực hiện khoán</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CongNhanThucHienKhoan</h4>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.MaDanhMucCNTHK, "MaDanhMucCNTHK", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Danh mục thực hiện khoán", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("MaDanhMucCNTHK", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("Danh mục thực hiện khoán", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaDanhMucCNTHK, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MaCongNhan, "MaCongNhan", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Công nhân", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("MaCongNhan", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("Công nhân", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaCongNhan, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ThoiGianBatDau, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Thời gian bắt đầu", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ThoiGianBatDau, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ThoiGianBatDau, "", new { @class = "text-danger" })
@@ -39,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ThoiGianKetThuc, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Thời gian kết thúc", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ThoiGianKetThuc, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ThoiGianKetThuc, "", new { @class = "text-danger" })
@@ -48,12 +48,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Tạo mới" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Quay lại", "Index", "CongNhanThucHienKhoanController", new { @class = "btn btn-primary" })
 </div>

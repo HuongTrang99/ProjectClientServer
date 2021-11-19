@@ -1,39 +1,46 @@
 ﻿@model IEnumerable<ProjectClientServer.Model.DanhMucCongNhanThucHienKhoan>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách danh mục thực hiện khoán";
 }
 
-<h2>Index</h2>
+<h2>Danh sách danh mục thực hiện khoán</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create", "DanhMucCongNhanThucHienKhoanController", new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
+            @*@Html.DisplayNameFor(model => model.SoLuong)*@
+            Số lượng
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LaKhoanChung)
+            @*@Html.DisplayNameFor(model => model.LaKhoanChung)*@
+            Là khoán chung
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LaKhoanChung)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDanhMucCNTHK }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDanhMucCNTHK }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDanhMucCNTHK })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaKhoanChung)
+            </td>
+            <td>
+                <a href="~/DanhMucCongNhanThucHienKhoan/Edit/@item.MaDanhMucCNTHK"> Chỉnh sửa |</a>
+                <a href="~/DanhMucCongNhanThucHienKhoan/Details/@item.MaDanhMucCNTHK"> Chi tiết |</a>
+                <a href="~/DanhMucCongNhanThucHienKhoan/Delete/@item.MaDanhMucCNTHK"> Xóa</a>
+
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.MaDanhMucCNTHK }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaDanhMucCNTHK }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaDanhMucCNTHK })*@
+            </td>
+        </tr>
+    }
 
 </table>
