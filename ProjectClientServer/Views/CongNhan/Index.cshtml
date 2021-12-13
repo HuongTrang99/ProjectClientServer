@@ -96,10 +96,12 @@
             @*<td>
                     @Html.DisplayFor(modelItem => item.LaAdmin)
                 </td>*@
+
+
             <td>
-                <a href="~/CongNhan/Edit/@item.MaCongNhan">|</a>
-                <a href="~/CongNhan/Details/@item.MaCongNhan"> Chi tiết |</a>
-                <a href="~/CongNhan/Delete/@item.MaCongNhan"> Xóa</a>
+                <a href="~/CongNhan/Edit/@item.MaCongNhan"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="~/CongNhan/Details/@item.MaCongNhan"> <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                <a href="~/CongNhan/Delete/@item.MaCongNhan"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.MaCongNhan }) |
                     @Html.ActionLink("Details", "Details", new { id=item.MaCongNhan }) |

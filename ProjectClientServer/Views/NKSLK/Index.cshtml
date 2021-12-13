@@ -29,7 +29,7 @@
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.GioKetThuc)*@
-            Giờ kết thúcs
+            Giờ kết thúc
         </th>
         <th></th>
     </tr>
@@ -53,9 +53,9 @@
                 @Html.DisplayFor(modelItem => item.GioKetThuc)
             </td>
             <td>
-                <a href="~/NKSLK/Edit/@item.MaNK"> Chỉnh sửa |</a>
-                <a href="~/NKSLK/Details/@item.MaNK"> Chi tiết |</a>
-                <a href="~/NKSLK/Delete/@item.MaNK"> Xóa</a>
+                <a href="~/NKSLK/Edit/@item.MaNK"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="~/NKSLK/Details/@item.MaNK"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                <a href="~/NKSLK/Delete/@item.MaNK"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.MaNK }) |
                     @Html.ActionLink("Details", "Details", new { id=item.MaNK }) |
                     @Html.ActionLink("Delete", "Delete", new { id=item.MaNK })*@
